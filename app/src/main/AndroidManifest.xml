@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+=============================================================
+AndroidManifest.xml
+=============================================================
+This is the "passport" of your app.
+It tells the Android operating system:
+  - What the app is called
+  - What permissions it needs (internet, camera, etc.)
+  - Which Activity (screen) to show first when the app opens
+
+For our simple Pomodoro app, we need NO special permissions —
+it doesn't use the internet, camera, or anything sensitive.
+=============================================================
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    The <application> tag defines the overall app.
+    android:label = the app name shown under the icon on the home screen
+    android:theme = the visual style of the app
+    -->
+    <application
+        android:allowBackup="true"
+        android:label="Pomodoro"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PomodoroApp">
+
+        <!--
+        An <activity> is a "screen" in Android.
+        Our app has only ONE screen — MainActivity.
+
+        android:exported="true" means it can be launched from
+        outside the app (e.g., by tapping the icon). The main
+        activity MUST have this set to true.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <!--
+            This <intent-filter> is what makes this Activity
+            the "launcher" — the one that opens when you tap the app icon.
+            MAIN + LAUNCHER together = "this is the start screen".
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

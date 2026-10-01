@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+=============================================================
+themes.xml
+=============================================================
+This file defines the visual "theme" of the app — things like
+background color, text color, etc. at the Android system level.
+
+We use NoActionBar because Jetpack Compose manages its own
+top bar. If we used the default theme, we'd get a double bar.
+=============================================================
+-->
+
+<resources>
+    <style name="Theme.PomodoroApp" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
